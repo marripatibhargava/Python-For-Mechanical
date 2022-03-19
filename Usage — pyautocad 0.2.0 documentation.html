@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<!-- saved from url=(0053)https://pyautocad.readthedocs.io/en/latest/usage.html -->
+<html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths" lang="en" style=""><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Usage — pyautocad 0.2.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+
+  
+    <link rel="stylesheet" href="./Usage — pyautocad 0.2.0 documentation_files/sphinx_rtd_theme.css" type="text/css">
+  
+
+  
+    <link rel="top" title="pyautocad 0.2.0 documentation" href="https://pyautocad.readthedocs.io/en/latest/index.html">
+        <link rel="next" title="API" href="https://pyautocad.readthedocs.io/en/latest/api.html">
+        <link rel="prev" title="Getting started" href="https://pyautocad.readthedocs.io/en/latest/gettingstarted.html"> 
+
+  
+  <script type="text/javascript" async="" src="./Usage — pyautocad 0.2.0 documentation_files/ga.js.download"></script><script src="./Usage — pyautocad 0.2.0 documentation_files/modernizr.min.js.download"></script>
+
+
+<!-- RTD Extra Head -->
+
+<!-- 
+Always link to the latest version, as canonical.
+http://docs.readthedocs.org/en/latest/canonical.html
+-->
+<link rel="canonical" href="http://pyautocad.readthedocs.io/en/latest/usage.html">
+
+<link rel="stylesheet" href="./Usage — pyautocad 0.2.0 documentation_files/readthedocs-doc-embed.css" type="text/css">
+
+<script type="text/javascript" src="./Usage — pyautocad 0.2.0 documentation_files/readthedocs-data.js.download"></script>
+
+<!-- Add page-specific data, which must exist in the page js, not global -->
+<script type="text/javascript">
+READTHEDOCS_DATA['page'] = 'usage'
+</script>
+
+<script type="text/javascript" src="./Usage — pyautocad 0.2.0 documentation_files/readthedocs-dynamic-include.js.download"></script>
+
+<!-- end RTD <extrahead> --><script src="./Usage — pyautocad 0.2.0 documentation_files/ethicalads.min.js.download" type="text/javascript" async="" id="ethicaladsjs"></script><style>[data-ea-publisher].loaded,[data-ea-type].loaded{font-size:14px;font-family:-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;font-weight:normal;font-style:normal;leter-spacing:0px;vertical-align:baseline;line-height:1.3em}[data-ea-publisher].loaded a,[data-ea-type].loaded a{text-decoration:none}[data-ea-publisher].loaded .ea-pixel,[data-ea-type].loaded .ea-pixel{display:none}[data-ea-publisher].loaded .ea-content,[data-ea-type].loaded .ea-content{margin:1em 1em 0.5em 1em;padding:1em;background:rgba(0,0,0,0.03);color:#505050}[data-ea-publisher].loaded .ea-content a:link,[data-ea-type].loaded .ea-content a:link{color:#505050}[data-ea-publisher].loaded .ea-content a:visited,[data-ea-type].loaded .ea-content a:visited{color:#505050}[data-ea-publisher].loaded .ea-content a:hover,[data-ea-type].loaded .ea-content a:hover{color:#373737}[data-ea-publisher].loaded .ea-content a:active,[data-ea-type].loaded .ea-content a:active{color:#373737}[data-ea-publisher].loaded .ea-content a strong,[data-ea-publisher].loaded .ea-content a b,[data-ea-type].loaded .ea-content a strong,[data-ea-type].loaded .ea-content a b{color:#088cdb}[data-ea-publisher].loaded .ea-callout a:link,[data-ea-type].loaded .ea-callout a:link{color:#6a6a6a}[data-ea-publisher].loaded .ea-callout a:visited,[data-ea-type].loaded .ea-callout a:visited{color:#6a6a6a}[data-ea-publisher].loaded .ea-callout a:hover,[data-ea-type].loaded .ea-callout a:hover{color:#505050}[data-ea-publisher].loaded .ea-callout a:active,[data-ea-type].loaded .ea-callout a:active{color:#505050}[data-ea-publisher].loaded .ea-callout a strong,[data-ea-publisher].loaded .ea-callout a b,[data-ea-type].loaded .ea-callout a strong,[data-ea-type].loaded .ea-callout a b{color:#088cdb}[data-ea-publisher].loaded .ea-callout a,[data-ea-type].loaded .ea-callout a{font-size:0.8em}[data-ea-publisher].loaded.dark .ea-content,[data-ea-type].loaded.dark .ea-content{background:rgba(255,255,255,0.05);color:#dcdcdc}[data-ea-publisher].loaded.dark .ea-content a:link,[data-ea-type].loaded.dark .ea-content a:link{color:#dcdcdc}[data-ea-publisher].loaded.dark .ea-content a:visited,[data-ea-type].loaded.dark .ea-content a:visited{color:#dcdcdc}[data-ea-publisher].loaded.dark .ea-content a:hover,[data-ea-type].loaded.dark .ea-content a:hover{color:#f6f6f6}[data-ea-publisher].loaded.dark .ea-content a:active,[data-ea-type].loaded.dark .ea-content a:active{color:#f6f6f6}[data-ea-publisher].loaded.dark .ea-content a strong,[data-ea-publisher].loaded.dark .ea-content a b,[data-ea-type].loaded.dark .ea-content a strong,[data-ea-type].loaded.dark .ea-content a b{color:#50baf9}[data-ea-publisher].loaded.dark .ea-callout a:link,[data-ea-type].loaded.dark .ea-callout a:link{color:#c3c3c3}[data-ea-publisher].loaded.dark .ea-callout a:visited,[data-ea-type].loaded.dark .ea-callout a:visited{color:#c3c3c3}[data-ea-publisher].loaded.dark .ea-callout a:hover,[data-ea-type].loaded.dark .ea-callout a:hover{color:#dcdcdc}[data-ea-publisher].loaded.dark .ea-callout a:active,[data-ea-type].loaded.dark .ea-callout a:active{color:#dcdcdc}[data-ea-publisher].loaded.dark .ea-callout a strong,[data-ea-publisher].loaded.dark .ea-callout a b,[data-ea-type].loaded.dark .ea-callout a strong,[data-ea-type].loaded.dark .ea-callout a b{color:#50baf9}@media (prefers-color-scheme: dark){[data-ea-publisher].loaded.adaptive .ea-content,[data-ea-type].loaded.adaptive .ea-content{background:rgba(255,255,255,0.05);color:#dcdcdc}[data-ea-publisher].loaded.adaptive .ea-content a:link,[data-ea-type].loaded.adaptive .ea-content a:link{color:#dcdcdc}[data-ea-publisher].loaded.adaptive .ea-content a:visited,[data-ea-type].loaded.adaptive .ea-content a:visited{color:#dcdcdc}[data-ea-publisher].loaded.adaptive .ea-content a:hover,[data-ea-type].loaded.adaptive .ea-content a:hover{color:#f6f6f6}[data-ea-publisher].loaded.adaptive .ea-content a:active,[data-ea-type].loaded.adaptive .ea-content a:active{color:#f6f6f6}[data-ea-publisher].loaded.adaptive .ea-content a strong,[data-ea-publisher].loaded.adaptive .ea-content a b,[data-ea-type].loaded.adaptive .ea-content a strong,[data-ea-type].loaded.adaptive .ea-content a b{color:#50baf9}[data-ea-publisher].loaded.adaptive .ea-callout a:link,[data-ea-type].loaded.adaptive .ea-callout a:link{color:#c3c3c3}[data-ea-publisher].loaded.adaptive .ea-callout a:visited,[data-ea-type].loaded.adaptive .ea-callout a:visited{color:#c3c3c3}[data-ea-publisher].loaded.adaptive .ea-callout a:hover,[data-ea-type].loaded.adaptive .ea-callout a:hover{color:#dcdcdc}[data-ea-publisher].loaded.adaptive .ea-callout a:active,[data-ea-type].loaded.adaptive .ea-callout a:active{color:#dcdcdc}[data-ea-publisher].loaded.adaptive .ea-callout a strong,[data-ea-publisher].loaded.adaptive .ea-callout a b,[data-ea-type].loaded.adaptive .ea-callout a strong,[data-ea-type].loaded.adaptive .ea-callout a b{color:#50baf9}}[data-ea-publisher].loaded .ea-content,[data-ea-type].loaded .ea-content{border:0px;border-radius:3px;box-shadow:0px 2px 3px rgba(0,0,0,0.15)}[data-ea-publisher].loaded.raised .ea-content,[data-ea-type].loaded.raised .ea-content{border:0px;border-radius:3px;box-shadow:0px 2px 3px rgba(0,0,0,0.15)}[data-ea-publisher].loaded.bordered .ea-content,[data-ea-type].loaded.bordered .ea-content{border:1px solid rgba(0,0,0,0.04);border-radius:3px;box-shadow:none}[data-ea-publisher].loaded.bordered.dark .ea-content,[data-ea-type].loaded.bordered.dark .ea-content{border:1px solid rgba(255,255,255,0.07)}@media (prefers-color-scheme: dark){[data-ea-publisher].loaded.bordered.adaptive .ea-content,[data-ea-type].loaded.bordered.adaptive .ea-content{border:1px solid rgba(255,255,255,0.07)}}[data-ea-publisher].loaded.flat .ea-content,[data-ea-type].loaded.flat .ea-content{border:0px;border-radius:3px;box-shadow:none}[data-ea-type="image"].loaded,[data-ea-publisher]:not([data-ea-type]).loaded,.ea-type-image{display:inline-block}[data-ea-type="image"].loaded .ea-content,[data-ea-publisher]:not([data-ea-type]).loaded .ea-content,.ea-type-image .ea-content{max-width:180px;overflow:auto;text-align:center}[data-ea-type="image"].loaded .ea-content>a>img,[data-ea-publisher]:not([data-ea-type]).loaded .ea-content>a>img,.ea-type-image .ea-content>a>img{width:120px;height:90px;display:inline-block}[data-ea-type="image"].loaded .ea-content>.ea-text,[data-ea-publisher]:not([data-ea-type]).loaded .ea-content>.ea-text,.ea-type-image .ea-content>.ea-text{margin-top:1em;font-size:1em;text-align:center}[data-ea-type="image"].loaded .ea-callout,[data-ea-publisher]:not([data-ea-type]).loaded .ea-callout,.ea-type-image .ea-callout{max-width:180px;margin:0em 1em 1em 1em;padding-left:1em;padding-right:1em;font-style:italic;text-align:right}[data-ea-type="image"].loaded.horizontal .ea-content,[data-ea-publisher]:not([data-ea-type]).loaded.horizontal .ea-content,.ea-type-image.horizontal .ea-content{max-width:320px}[data-ea-type="image"].loaded.horizontal .ea-content>a>img,[data-ea-publisher]:not([data-ea-type]).loaded.horizontal .ea-content>a>img,.ea-type-image.horizontal .ea-content>a>img{float:left;margin-right:1em}[data-ea-type="image"].loaded.horizontal .ea-content .ea-text,[data-ea-publisher]:not([data-ea-type]).loaded.horizontal .ea-content .ea-text,.ea-type-image.horizontal .ea-content .ea-text{margin-top:0em;text-align:left;overflow:auto}[data-ea-type="image"].loaded.horizontal .ea-callout,[data-ea-publisher]:not([data-ea-type]).loaded.horizontal .ea-callout,.ea-type-image.horizontal .ea-callout{max-width:320px;text-align:right}[data-ea-type="text"].loaded,.ea-type-text{font-size:14px}[data-ea-type="text"].loaded .ea-content,.ea-type-text .ea-content{text-align:left}[data-ea-type="text"].loaded .ea-callout,.ea-type-text .ea-callout{margin:0.5em 1em 1em 1em;padding-left:1em;padding-right:1em;text-align:right;font-style:italic}[data-ea-style="stickybox"].loaded .ea-type-image{z-index:10;position:fixed;bottom:20px;right:20px}[data-ea-style="stickybox"].loaded .ea-type-image .ea-stickybox-hide{cursor:pointer;position:absolute;top:0.75em;right:0.75em;background-color:#fefefe;border:1px solid #088cdb;border-radius:50%;color:#088cdb;font-size:1em;text-align:center;height:1.5em;width:1.5em;line-height:1.5em}@media (max-width: 1300px){[data-ea-style="stickybox"].loaded .ea-type-image{position:static;bottom:0;right:0;margin:auto;text-align:center}[data-ea-style="stickybox"].loaded .ea-type-image .ea-stickybox-hide{display:none}}@media (min-width: 1301px){[data-ea-style="stickybox"].loaded .ea-type-image .ea-content{background:#dcdcdc}[data-ea-style="stickybox"].loaded.dark .ea-type-image .ea-content{background:#505050}}@media (min-width: 1301px) and (prefers-color-scheme: dark){[data-ea-style="stickybox"].loaded.adaptive .ea-type-image .ea-content{background:#505050}}
+</style><script src="./Usage — pyautocad 0.2.0 documentation_files/saved_resource" type="text/javascript" async=""></script></head>
+
+<body class="wy-body-for-nav" role="document" style="" data-new-gr-c-s-check-loaded="14.1052.0" data-gr-ext-installed="">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="https://pyautocad.readthedocs.io/en/latest/index.html" class="icon icon-home"> pyautocad
+          
+
+          
+          </a>
+
+          
+            
+            
+            
+              <div class="version">
+                latest
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="https://pyautocad.readthedocs.io/en/latest/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs">
+    <input type="hidden" name="check_keywords" value="yes">
+    <input type="hidden" name="area" value="default">
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="https://pyautocad.readthedocs.io/en/latest/gettingstarted.html">Getting started</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="https://pyautocad.readthedocs.io/en/latest/usage.html">Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="https://pyautocad.readthedocs.io/en/latest/usage.html#main-interface-and-types">Main interface and types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://pyautocad.readthedocs.io/en/latest/usage.html#working-with-tables">Working with tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://pyautocad.readthedocs.io/en/latest/usage.html#improve-speed">Improve speed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://pyautocad.readthedocs.io/en/latest/usage.html#utility-functions">Utility functions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="https://pyautocad.readthedocs.io/en/latest/api.html">API</a></li>
+</ul>
+
+            
+          
+        </div>
+      <div id="rtd-sidebar" data-ea-publisher="readthedocs" data-ea-type="readthedocs-sidebar" data-ea-manual="true" class="ethical-rtd ethical-dark-theme loaded" data-ea-keywords="activex|autocad|automation|comtypes|python|readthedocs-project-2931|readthedocs-project-pyautocad" data-ea-campaign-types="community|house|paid"><div class="ethical-sidebar"><div class="ethical-content"><a href="https://server.ethicalads.io/proxy/click/2461/11197cec-4282-4a61-a6b4-9226a4939577/" rel="nofollow noopener" target="_blank" class="ethical-image-link"><img src="./Usage — pyautocad 0.2.0 documentation_files/DODX4691-240x180-1_tkYyQVi.jpg" alt="Sponsored: Digital Ocean"></a><div class="ethical-text"><a href="https://server.ethicalads.io/proxy/click/2461/11197cec-4282-4a61-a6b4-9226a4939577/" rel="nofollow noopener" target="_blank"><strong>Digital Ocean: </strong><span>Create your world-changing apps on the cloud developers love</span><strong> Try now with a $100 Credit</strong></a></div></div><div class="ethical-callout"><small><em><a rel="nofollow noopener" target="_blank" href="https://ethicalads.io/?ref=rtd-sidebar">Ad by EthicalAds</a><span> &nbsp; · &nbsp; </span><a rel="nofollow noopener" target="_blank" href="https://www.ethicalads.io/publishers/?ref=rtd-sidebar-join">Monetize your site</a></em></small></div></div><img src="./Usage — pyautocad 0.2.0 documentation_files/saved_resource(1)" class="ea-pixel"><img src="./Usage — pyautocad 0.2.0 documentation_files/saved_resource(2)" class="ea-pixel"></div></div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="https://pyautocad.readthedocs.io/en/latest/index.html">pyautocad</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="https://pyautocad.readthedocs.io/en/latest/index.html">Docs</a> »</li>
+      
+    <li>Usage</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/reclosedev/pyautocad/blob/master/docs/usage.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="usage">
+<h1>Usage<a class="headerlink" href="https://pyautocad.readthedocs.io/en/latest/usage.html#usage" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="main-interface-and-types">
+<h2>Main interface and types<a class="headerlink" href="https://pyautocad.readthedocs.io/en/latest/usage.html#main-interface-and-types" title="Permalink to this headline">¶</a></h2>
+<p>For our first example, we will use <a class="reference internal" href="https://pyautocad.readthedocs.io/en/latest/api.html#pyautocad.api.Autocad" title="pyautocad.api.Autocad"><code class="xref py py-class docutils literal"><span class="pre">Autocad</span></code></a> (main Automation object) and
+<a class="reference internal" href="https://pyautocad.readthedocs.io/en/latest/api.html#pyautocad.types.APoint" title="pyautocad.types.APoint"><code class="xref py py-class docutils literal"><span class="pre">pyautocad.types.APoint</span></code></a> for operations with coordinates</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyautocad</span> <span class="kn">import</span> <span class="n">Autocad</span><span class="p">,</span> <span class="n">APoint</span>
+</pre></div>
+</div>
+<p>Let’s create AutoCAD application or connect to already running application:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">acad</span> <span class="o">=</span> <span class="n">Autocad</span><span class="p">(</span><span class="n">create_if_not_exists</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">acad</span><span class="o">.</span><span class="n">prompt</span><span class="p">(</span><span class="s2">"Hello, Autocad from Python</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+<span class="k">print</span> <span class="n">acad</span><span class="o">.</span><span class="n">doc</span><span class="o">.</span><span class="n">Name</span>
+</pre></div>
+</div>
+<p>To work with AutoCAD documents and objects we can use ActiveX interface,
+<a class="reference internal" href="https://pyautocad.readthedocs.io/en/latest/api.html#pyautocad.api.Autocad" title="pyautocad.api.Autocad"><code class="xref py py-class docutils literal"><span class="pre">Autocad</span></code></a> (from pyautocad) contains some methods to simplify common Automation tasks, such as
+object iteration and searching, getting objects from user’s selection, printing messages.</p>
+<p>There are shortcuts for current <code class="docutils literal"><span class="pre">ActiveDocument</span></code> - <a class="reference internal" href="https://pyautocad.readthedocs.io/en/latest/api.html#pyautocad.api.Autocad.doc" title="pyautocad.api.Autocad.doc"><code class="xref py py-attr docutils literal"><span class="pre">Autocad.doc</span></code></a>
+and <code class="docutils literal"><span class="pre">ActiveDocument.ModelSpace</span></code> - <a class="reference internal" href="https://pyautocad.readthedocs.io/en/latest/api.html#pyautocad.api.Autocad.model" title="pyautocad.api.Autocad.model"><code class="xref py py-attr docutils literal"><span class="pre">Autocad.model</span></code></a></p>
+<p>Let’s add some objects to document:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">p1</span> <span class="o">=</span> <span class="n">APoint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">p2</span> <span class="o">=</span> <span class="n">APoint</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">acad</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">AddText</span><span class="p">(</span><span class="s1">u'Hi </span><span class="si">%s</span><span class="s1">!'</span> <span class="o">%</span> <span class="n">i</span><span class="p">,</span> <span class="n">p1</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">)</span>
+    <span class="n">acad</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">AddLine</span><span class="p">(</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">)</span>
+    <span class="n">acad</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">AddCircle</span><span class="p">(</span><span class="n">p1</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="n">p1</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="mi">10</span>
+</pre></div>
+</div>
+<p>Now our document contains some <code class="docutils literal"><span class="pre">Texts</span></code>, <code class="docutils literal"><span class="pre">Lines</span></code> and <code class="docutils literal"><span class="pre">Circles</span></code>, let’s iterate them all:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">obj</span> <span class="ow">in</span> <span class="n">acad</span><span class="o">.</span><span class="n">iter_objects</span><span class="p">():</span>
+    <span class="k">print</span> <span class="n">obj</span><span class="o">.</span><span class="n">ObjectName</span>
+</pre></div>
+</div>
+<p>Wea can also iterate objects of concrete type:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">text</span> <span class="ow">in</span> <span class="n">acad</span><span class="o">.</span><span class="n">iter_objects</span><span class="p">(</span><span class="s1">'Text'</span><span class="p">):</span>
+    <span class="k">print</span> <span class="n">text</span><span class="o">.</span><span class="n">TextString</span><span class="p">,</span> <span class="n">text</span><span class="o">.</span><span class="n">InsertionPoint</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Object name can be partial and case insensitive, e.g.
+<code class="docutils literal"><span class="pre">acad.iter_objects('tex')</span></code> will return <code class="docutils literal"><span class="pre">AcDbText</span></code> and <code class="docutils literal"><span class="pre">AcDbMText</span></code> objects</p>
+</div>
+<p>Or multiple types:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">obj</span> <span class="ow">in</span> <span class="n">acad</span><span class="o">.</span><span class="n">iter_objects</span><span class="p">([</span><span class="s1">'Text'</span><span class="p">,</span> <span class="s1">'Line'</span><span class="p">]):</span>
+    <span class="k">print</span> <span class="n">obj</span><span class="o">.</span><span class="n">ObjectName</span>
+</pre></div>
+</div>
+<p>Also we can find first object with some conditions.
+For example, let’s find first text item which contains <code class="docutils literal"><span class="pre">3</span></code>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">text_contains_3</span><span class="p">(</span><span class="n">text_obj</span><span class="p">):</span>
+    <span class="k">return</span> <span class="s1">'3'</span> <span class="ow">in</span> <span class="n">text_obj</span><span class="o">.</span><span class="n">TextString</span>
+
+<span class="n">text</span> <span class="o">=</span> <span class="n">acad</span><span class="o">.</span><span class="n">find_one</span><span class="p">(</span><span class="s1">'Text'</span><span class="p">,</span> <span class="n">predicate</span><span class="o">=</span><span class="n">text_contains_3</span><span class="p">)</span>
+<span class="k">print</span> <span class="n">text</span><span class="o">.</span><span class="n">TextString</span>
+</pre></div>
+</div>
+<p>To modify objects in document, we need to find interesting objects and change its properties.
+Some properties are described with constants, e.g. text alignment. These constants can be accessed through
+<a class="reference internal" href="https://pyautocad.readthedocs.io/en/latest/api.html#pyautocad.api.ACAD" title="pyautocad.api.ACAD"><code class="xref py py-data docutils literal"><span class="pre">ACAD</span></code></a>. Let’s change all text objects text alignment:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyautocad</span> <span class="kn">import</span> <span class="n">ACAD</span>
+
+<span class="k">for</span> <span class="n">text</span> <span class="ow">in</span> <span class="n">acad</span><span class="o">.</span><span class="n">iter_objects</span><span class="p">(</span><span class="s1">'Text'</span><span class="p">):</span>
+    <span class="n">old_insertion_point</span> <span class="o">=</span> <span class="n">APoint</span><span class="p">(</span><span class="n">text</span><span class="o">.</span><span class="n">InsertionPoint</span><span class="p">)</span>
+    <span class="n">text</span><span class="o">.</span><span class="n">Alignment</span> <span class="o">=</span> <span class="n">ACAD</span><span class="o">.</span><span class="n">acAlignmentRight</span>
+    <span class="n">text</span><span class="o">.</span><span class="n">TextAlignmentPoint</span> <span class="o">=</span> <span class="n">old_insertion_point</span>
+</pre></div>
+</div>
+<p>In previous code we have converted <code class="docutils literal"><span class="pre">text.InsertionPoint</span></code> to <a class="reference internal" href="https://pyautocad.readthedocs.io/en/latest/api.html#pyautocad.types.APoint" title="pyautocad.types.APoint"><code class="xref py py-class docutils literal"><span class="pre">APoint</span></code></a> because
+we can’t just use default <code class="docutils literal"><span class="pre">tuple</span></code> when setting another properties such as <code class="docutils literal"><span class="pre">text.TextAlignmentPoint</span></code>.</p>
+<p>If wee need to change position of some object, we should use <a class="reference internal" href="https://pyautocad.readthedocs.io/en/latest/api.html#pyautocad.types.APoint" title="pyautocad.types.APoint"><code class="xref py py-class docutils literal"><span class="pre">APoint</span></code></a>,
+for example let’s change lines end position:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">acad</span><span class="o">.</span><span class="n">iter_objects</span><span class="p">(</span><span class="s1">'Line'</span><span class="p">):</span>
+    <span class="n">p1</span> <span class="o">=</span> <span class="n">APoint</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">StartPoint</span><span class="p">)</span>
+    <span class="n">line</span><span class="o">.</span><span class="n">EndPoint</span> <span class="o">=</span> <span class="n">p1</span> <span class="o">-</span> <span class="n">APoint</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="working-with-tables">
+<h2>Working with tables<a class="headerlink" href="https://pyautocad.readthedocs.io/en/latest/usage.html#working-with-tables" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">To work with tables, <a class="reference external" href="http://pypi.python.org/pypi/xlrd">xlrd</a> and <a class="reference external" href="http://pypi.python.org/pypi/tablib">tablib</a> should be installed.</p>
+</div>
+<p>To simplify importing and exporting data there is <a class="reference internal" href="https://pyautocad.readthedocs.io/en/latest/api.html#pyautocad.contrib.tables.Table" title="pyautocad.contrib.tables.Table"><code class="xref py py-class docutils literal"><span class="pre">Table</span></code></a> class exist.
+It allows you to read and write tabular data in popular formats:</p>
+<ul class="simple">
+<li>csv</li>
+<li>xls</li>
+<li>xlsx (write only)</li>
+<li>json</li>
+</ul>
+<p>Let’s try to solve some basic task. We need to save text and position
+from all text objects to Excel file, and then load it back.</p>
+<p>First we need to add some objects to AutoCAD:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyautocad</span> <span class="kn">import</span> <span class="n">Autocad</span><span class="p">,</span> <span class="n">APoint</span>
+<span class="kn">from</span> <span class="nn">pyautocad.contrib.tables</span> <span class="kn">import</span> <span class="n">Table</span>
+
+<span class="n">acad</span> <span class="o">=</span> <span class="n">Autocad</span><span class="p">()</span>
+<span class="n">p1</span> <span class="o">=</span> <span class="n">APoint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="n">obj</span> <span class="o">=</span> <span class="n">acad</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">AddText</span><span class="p">(</span><span class="s1">u'Hi </span><span class="si">%s</span><span class="s1">!'</span> <span class="o">%</span> <span class="n">i</span><span class="p">,</span> <span class="n">p1</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">)</span>
+    <span class="n">p1</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="mi">10</span>
+</pre></div>
+</div>
+<p>Now we can iterate this objects and save them to Excel table:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">table</span> <span class="o">=</span> <span class="n">Table</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">obj</span> <span class="ow">in</span> <span class="n">acad</span><span class="o">.</span><span class="n">iter_objects</span><span class="p">(</span><span class="s1">'Text'</span><span class="p">):</span>
+    <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">InsertionPoint</span>
+    <span class="n">table</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span><span class="n">obj</span><span class="o">.</span><span class="n">TextString</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">])</span>
+<span class="n">table</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">'data.xls'</span><span class="p">,</span> <span class="s1">'xls'</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>After saving this data to ‘data.xls’ and probably changing it with some table
+processor software (e.g. Microsoft Office Excel) we can retrieve our data from file:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">Table</span><span class="o">.</span><span class="n">data_from_file</span><span class="p">(</span><span class="s1">'data.xls'</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal"><span class="pre">data</span></code> will contain:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="s1">u'Hi 0!'</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span>
+ <span class="p">[</span><span class="s1">u'Hi 1!'</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span>
+ <span class="p">[</span><span class="s1">u'Hi 2!'</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">20.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span>
+ <span class="p">[</span><span class="s1">u'Hi 3!'</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">30.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span>
+ <span class="p">[</span><span class="s1">u'Hi 4!'</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">40.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]]</span>
+</pre></div>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">Example of working with AutoCAD table objects
+at <a class="reference external" href="https://github.com/reclosedev/pyautocad/blob/master/examples/dev_get_table_info.py">examples/dev_get_table_info.py</a></p>
+</div>
+</div>
+<div class="section" id="improve-speed">
+<h2>Improve speed<a class="headerlink" href="https://pyautocad.readthedocs.io/en/latest/usage.html#improve-speed" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">ActiveX technology is quite slow. When you are accessing object attributes like
+position, text, etc, every time call is passed to AutoCAD. It can slowdown execution
+time. For example if you have program, which combines single line
+text based on its relative positions, you probably need to get each text position
+several times. To speed this up, you can cache objects attributes using the <a class="reference internal" href="https://pyautocad.readthedocs.io/en/latest/api.html#pyautocad.cache.Cached" title="pyautocad.cache.Cached"><code class="xref py py-class docutils literal"><span class="pre">pyautocad.cache.Cached</span></code></a> proxy (see example in class documentation)</p>
+</li>
+<li><p class="first">To improve speed of AutoCAD table manipulations, you can use <code class="docutils literal"><span class="pre">Table.RegenerateTableSuppressed</span> <span class="pre">=</span> <span class="pre">True</span></code>
+or handy context manager <a class="reference internal" href="https://pyautocad.readthedocs.io/en/latest/api.html#pyautocad.utils.suppressed_regeneration_of" title="pyautocad.utils.suppressed_regeneration_of"><code class="xref py py-func docutils literal"><span class="pre">suppressed_regeneration_of(table)</span></code></a>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">table</span> <span class="o">=</span> <span class="n">acad</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">AddTable</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">columns</span><span class="p">,</span> <span class="n">row_height</span><span class="p">,</span> <span class="n">col_width</span><span class="p">)</span>
+<span class="k">with</span> <span class="n">suppressed_regeneration_of</span><span class="p">(</span><span class="n">table</span><span class="p">):</span>
+    <span class="n">table</span><span class="o">.</span><span class="n">SetAlignment</span><span class="p">(</span><span class="n">ACAD</span><span class="o">.</span><span class="n">acDataRow</span><span class="p">,</span> <span class="n">ACAD</span><span class="o">.</span><span class="n">acMiddleCenter</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">rows</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">columns</span><span class="p">):</span>
+            <span class="n">table</span><span class="o">.</span><span class="n">SetText</span><span class="p">(</span><span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">,</span> <span class="s1">'</span><span class="si">%s</span><span class="s1"> </span><span class="si">%s</span><span class="s1">'</span> <span class="o">%</span> <span class="p">(</span><span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">))</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="utility-functions">
+<h2>Utility functions<a class="headerlink" href="https://pyautocad.readthedocs.io/en/latest/usage.html#utility-functions" title="Permalink to this headline">¶</a></h2>
+<p>There is also some utility functions for work with AutoCAD text objects and more.
+See <a class="reference internal" href="https://pyautocad.readthedocs.io/en/latest/api.html#module-pyautocad.utils" title="pyautocad.utils"><code class="xref py py-mod docutils literal"><span class="pre">pyautocad.utils</span></code></a> documentation.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="https://pyautocad.readthedocs.io/en/latest/api.html" class="btn btn-neutral float-right" title="API" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="https://pyautocad.readthedocs.io/en/latest/gettingstarted.html" class="btn btn-neutral" title="Getting started" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr>
+
+  <div role="contentinfo">
+    <p>
+        © Copyright 2014, Roman Haritonov.
+      
+        <span class="commit">
+          Revision <code>527a6720</code>.
+        </span>
+      
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org/">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Read the Docs</span>
+      v: latest
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions"><!-- Inserted RTD Footer -->
+
+<div class="injected">
+
+  
+
+      
+      
+      
+      <dl>
+        <dt>Versions</dt>
+        
+        <dd class="rtd-current-item">
+          <a href="https://pyautocad.readthedocs.io/en/latest/usage.html">latest</a>
+        </dd>
+        
+        <dd>
+          <a href="https://pyautocad.readthedocs.io/en/stable/usage.html">stable</a>
+        </dd>
+        
+        <dd>
+          <a href="https://pyautocad.readthedocs.io/en/0.1.2/usage.html">0.1.2</a>
+        </dd>
+        
+      </dl>
+      
+      
+
+      
+      
+      <dl>
+        <dt>Downloads</dt>
+        
+        <dd><a href="https://pyautocad.readthedocs.io/_/downloads/en/latest/pdf/">PDF</a></dd>
+        
+        <dd><a href="https://pyautocad.readthedocs.io/_/downloads/en/latest/htmlzip/">HTML</a></dd>
+        
+        <dd><a href="https://pyautocad.readthedocs.io/_/downloads/en/latest/epub/">Epub</a></dd>
+        
+      </dl>
+      
+      
+
+      
+      <dl>
+        
+        <!-- These are kept as relative links for internal installs that are http -->
+        <dt>On Read the Docs</dt>
+        <dd>
+          <a href="https://readthedocs.org/projects/pyautocad/">Project Home</a>
+        </dd>
+        <dd>
+          <a href="https://readthedocs.org/projects/pyautocad/builds/">Builds</a>
+        </dd>
+        <dd>
+          <a href="https://readthedocs.org/projects/pyautocad/downloads/">Downloads</a>
+        </dd>
+      </dl>
+      
+
+      
+
+      
+      <dl>
+        <dt>On GitHub</dt>
+        <dd>
+          <a href="https://github.com/reclosedev/pyautocad/blob/master/docs/usage.rst">View</a>
+        </dd>
+        
+      </dl>
+      
+      
+
+      
+      <dl>
+        <dt>Search</dt>
+        <dd>
+          <div style="padding: 6px;">
+            
+            <form id="flyout-search-form" class="wy-form" target="_blank" action="https://readthedocs.org/projects/pyautocad/search/" method="get">
+              <input type="text" name="q" aria-label="Search docs" placeholder="Search docs">
+              </form>
+          </div>
+        </dd>
+      </dl>
+      
+
+      <hr>
+
+      
+        <small>
+          <span>Hosted by <a href="https://readthedocs.org/">Read the Docs</a></span>
+          <span> · </span>
+          <a href="https://docs.readthedocs.io/page/privacy-policy.html">Privacy Policy</a>
+        </small>
+      
+
+      
+
+</div>
+</div>
+  </div>
+
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.2.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="./Usage — pyautocad 0.2.0 documentation_files/jquery-2.0.3.min.js.download"></script>
+      <script type="text/javascript" src="./Usage — pyautocad 0.2.0 documentation_files/jquery-migrate-1.2.1.min.js.download"></script>
+      <script type="text/javascript" src="./Usage — pyautocad 0.2.0 documentation_files/underscore.js.download"></script>
+      <script type="text/javascript" src="./Usage — pyautocad 0.2.0 documentation_files/doctools.js.download"></script>
+      <script type="text/javascript" src="./Usage — pyautocad 0.2.0 documentation_files/readthedocs-doc-embed.js.download"></script>
+
+  
+
+  
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
